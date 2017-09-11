@@ -1,0 +1,14 @@
+Summary of previous lect:
+
+In SAS we have 
+  proc sgplot;
+    scatter x=ht y=wt / group=gender; #one graph
+  proc sgplot;
+    class=gender; #got a statement to separate the graph, separate graph
+
+In R we have
+  par(mfrow=c(2,1)) #one for male one for female separate graph
+  plot(...)
+  plot(...)
+  plot(htf,wtf) #default col and pch
+  points(htm,wtm pch=.. col=..) #need to set
