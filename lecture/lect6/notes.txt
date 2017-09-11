@@ -12,3 +12,25 @@ In R we have
   plot(...)
   plot(htf,wtf) #default col and pch
   points(htm,wtm pch=.. col=..) #need to set
+
+chapt 5:
+ #he nvr go thru r and sas for "plot bivariate data"
+  (SPSS)
+  plot bivariate data -> "Graphs -> "Chart Builder"-> "one one entry" -> "drag variables" to "chart..."
+  is there 
+ 
+chapt 6:
+  6.2: they maybe outliers, outliers will not affect so much 
+  6.3: location, scale 
+  6.4: Robust location estimators 
+        1) Trimmed mean(remove bigger and smaller one, eg 10% TM both ends)
+        2) Winsorized mean(eg 10% WM, replace these portion with the left over head and tail of the 80%)
+        3) Humber's M-estimator
+        4) Tukey's bisquare......
+  6.5: skewed to the right, eg 18 and 27, the graph gt mistake inconsistent 
+        10%-> change to 20% 
+        20% trimmed mean= 9
+        20% and lowest 20% of the observations
+        20% winsorized mean
+  6.6: M-estimators for location (least square method) see image
+  6.15 IQR 
