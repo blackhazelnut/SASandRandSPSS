@@ -34,3 +34,7 @@ chapt 6:
         20% winsorized mean
   6.6: M-estimators for location (least square method) see image
   6.15 IQR 
+
+  chapt6:
+    IQR throw away 50% of data, MAD(median absolute deviation) throw away more data. This is more ROBUST 
+    
