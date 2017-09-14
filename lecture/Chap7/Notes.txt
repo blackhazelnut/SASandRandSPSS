@@ -1,0 +1,6 @@
+Chapt 7:
+  7.2: gender can be numeric, we can make it categorical example: <20, 20<age<40, 40<age<60, age>60
+  7.3: use freq table, must include level of categorical level, freq level (eg, male or female)
+       use contingency table, more than one dimension
+       use chi-square test, check two categorial var indpt or not
+       use charts, use bar-chart
