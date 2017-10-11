@@ -1,5 +1,70 @@
 qn1.
+a) give label to "gender", "drivelic" and "travel"
+proc format;
+ value $genderFmt "M" = "Male"
+                  "F" = "Female"
+                  Other = "Miscoded";
+                  
+ value $drivelicFmt "Y" = "Yes"
+                    "N" = "No";
+                    
+ value $travelFmt "Y" = "Yes"
+                  "N" = "No";
+                  
+data tut5_2q1;
+ infile "~/student.txt" firstobs=2;
+ input id $ gender $ workhour $ drivelic $ travel $;
+ label gender = "Gender"
+       drivelic = "Driving Licence";
+ format gender $genderfmt.
+        drivelic $drivelicfmt.
+        travel $travelFmt.;
+ run;
+ 
+ b) Generate frequency counts
+ 
+proc freq data = tut5_2q1;
+	title "Gender";
+	tables gender;
+	
+	title "Driving License";
+	tables drivelic;
+	
+	title "Travel outside Asia";
+	tables travel;
+	
+run;
 
+c) Generate gender vs drivelic
+
+proc freq data = tut5_2q1;
+	title "gender vs drivelic";
+	tables gender * drivelic;
+run;
+
+ d)
+  i) the first grp includes all the students with 0 work hr is "(0hrs)none"
+  ii)
+  iii)
+  proc format;
+	value wkhrgpfmt 0 		= "(0hrs)none"
+				 	1-19 	= "(1-19hrs)some"
+				 	20-99   = "(20-99hrs)many"
+				 	.		= "Did not put"
+				 	Other   = "Out of Range"
+				 	;
+				 
+e)
+proc freq data=tut5_2q1;
+	title "wkhrgp";
+	tables workhour * travel;
+	format workhour wkhrgpfmt.;
+	
+run;
+
+ 
+ 
+ 
 
 
 
