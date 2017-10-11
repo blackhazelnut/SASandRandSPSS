@@ -13,7 +13,7 @@ proc format;
                   
 data tut5_2q1;
  infile "~/student.txt" firstobs=2;
- input id $ gender $ workhour $ drivelic $ travel $;
+ input id $ gender workhour $ drivelic $ travel $;
  label gender = "Gender"
        drivelic = "Driving Licence";
  format gender $genderfmt.
