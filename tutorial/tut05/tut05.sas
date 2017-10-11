@@ -1,3 +1,33 @@
+qn1.
+
+
+
+
+
+
+
+qn2. compute chi-square statistic and test if quality of work is indpt of shift, alpha = 0.05
+
+data tut5_2Shift;
+ input conforming $ shift $ count;
+ datalines;
+ No Day 16
+ No Evening 24
+ Yes Day 654 
+ Yes Evening 306
+ ;
+proc freq data = tut5_2Shift;
+ title "Chi-square test";
+ tables conforming * shift/ chisq;
+ weight count;
+run;
+ 
+
+
+
+
+
+
 qn3. Determining whether or not a particular debate btw two candidates was effective changing viewrs's preferences for the candidates.
 
 
