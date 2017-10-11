@@ -2,7 +2,7 @@ qn3. Determining whether or not a particular debate btw two candidates was effec
 
 
 data tut5_3male;
- input before $ after $ outcome $;
+ input before $ after $ outcome;
  datalines;
  A A 67
  A B 28
@@ -11,14 +11,14 @@ data tut5_3male;
  ;
  
 proc freq data=tut5_3male;
-  title = "NcMear's test";
+  title "NcMear's test";
   tables before * after / agree;
   weight outcome;
 run;
 
 
 data tut5_3female;
- input before $ after $ outcome $
+ input before $ after $ outcome;
  datalines;
  A A 58 
  A B 42
@@ -27,7 +27,7 @@ data tut5_3female;
  ;
  
 proc freq data=tut5_3female;
-  title="NcMear's test";
+  title "NcMear's test";
   tables before * after / agree;
   weight outcome;
 run;
